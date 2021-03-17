@@ -5,8 +5,8 @@
     ":dependencyDashboard",
     ":maintainLockFilesWeekly",
     ":renovatePrefix",
-    ":prConcurrentLimit10",
-    "schedule:earlyMondays"
+    ":prHourlyLimitNone",
+    ":prConcurrentLimit10"
   ],
   "baseBranches": ["master"],
   "labels": ["renovate"],
