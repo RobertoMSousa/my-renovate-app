@@ -1,5 +1,17 @@
 {
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "extends": [
-    "config:base"
-  ]
+    "config:base",
+    ":dependencyDashboard",
+    ":maintainLockFilesWeekly",
+    ":renovatePrefix",
+    ":prConcurrentLimit10",
+    "schedule:earlyMondays"
+  ],
+  "baseBranches": ["master"],
+  "labels": ["renovate"],
+  "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
+  "dependencyDashboardTitle": "Renovate Dependency Dashboard",
+  "commitMessagePrefix": "[RENOVATE] ",
+  "packageRules": []
 }
