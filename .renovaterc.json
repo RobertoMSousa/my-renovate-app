@@ -2,14 +2,14 @@
   "extends": [
     "config:base",
     ":dependencyDashboard",
-    ":maintainLockFilesWeekly", //Run lock file maintenance (updates) early Monday mornings
-    ":renovatePrefix", // Use renovate/ as prefix for all branch names
-    ":prHourlyLimitNone", // no limit of PR's per hour
-    ":prConcurrentLimit10", // limit the number of PR's to 10
+    ":maintainLockFilesWeekly", 
+    ":renovatePrefix", 
+    ":prHourlyLimitNone",
+    ":prConcurrentLimit10",
     ":disableMajorUpdates",
-    ":combinePatchMinorReleases", // combine patch and minor on a single PR
-    ":automergeDisabled", // Disable automerging feature - wait for humans to merge all PRs
-    ":label('renovate')" //Apply label arg0 to PRs
+    ":combinePatchMinorReleases",
+    ":automergeDisabled", 
+    ":label('renovate')"
   ],
   "baseBranches": ["master"],
   "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
