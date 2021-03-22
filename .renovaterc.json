@@ -1,19 +1,34 @@
 {
+  "timezone": "Europe/London",
   "extends": [
     "config:base",
     ":dependencyDashboard",
     ":maintainLockFilesWeekly", 
     ":renovatePrefix", 
-    ":prHourlyLimitNone",
+    ":prHourlyLimitNone", 
     ":prConcurrentLimit10",
     ":disableMajorUpdates",
-    ":combinePatchMinorReleases",
-    ":automergeDisabled", 
-    ":label('renovate')"
+    ":automergeDisabled"
+  ],
+  "schedule": [
+    "before 7am on Monday"
   ],
   "baseBranches": ["master"],
+  "labels": ["renovate"],
   "gitAuthor": "Renovate Bot <bot@renovateapp.com>",
   "dependencyDashboardTitle": "Renovate Dependency Dashboard",
   "commitMessagePrefix": "[RENOVATE] ",
-  "packageRules": []
+  "stabilityDays": 3,
+  "packageRules": [
+    {
+      "groupName": "devDependencies",
+      "matchDepTypes": ["devDependencies"], 
+      "prPriority": -1
+    },
+    {
+      "groupName": "definitelyTyped",
+      "matchPackagePatterns": ["^@types/"],
+      "prPriority": -1
+    }
+  ]
 }
